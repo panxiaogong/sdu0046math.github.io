@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		A07-公钥密码学的数学基础 | 
+	 
+	网安数学站
+	</title>
+	
+	<!-- keywords,description -->
+	
+	
+		<meta name="description" content="山东大学网络空间安全学院数学站" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.com";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head>
+
+<body class=" dir-page">
+	<header id="header" class="header-on">
+    <a id="title" href="/" class="logo">网安数学站</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/panxiaogong/sdu0046math.github.io' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar" class="on">
+	<div id="sidebar-resizer" aria-hidden="true"></div>
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								
+								<li class="file">
+									
+									<a href="/" >
+                      
+										    00-关于本站
+                      
+										  
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								
+								<li class="directory">
+									
+									<a href="/A01-线性代数/" class="directory">
+										<span class="dir-name">A01-线性代数</span>
+										<span class="dir-caret" aria-hidden="true"></span>
+									</a>
+									
+							<ul>
+								
+								<li class="file">
+									
+									<a href="/A01-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" >
+                      
+										    序言
+                      
+										  
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								
+								<li class="directory">
+									
+									<a href="/A04-离散数学/" class="directory">
+										<span class="dir-name">A04-离散数学</span>
+										<span class="dir-caret" aria-hidden="true"></span>
+									</a>
+									
+							<ul>
+								
+								<li class="file">
+									
+									<a href="/A04-%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" >
+                      
+										    第一章 基础:逻辑和证明
+                      
+										  
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+
+	<!-- 引入正文 -->
+	<div id="content" class="content content-on">
+		
+	
+	<div id="index">
+		
+	</div>
+
+
+	</div>
+	<div id="footer" class="footer-on">
+	<p>
+	©<span id="footerYear-start">2025</span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">山东大学网络空间安全学院</a>
+	
+	
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
