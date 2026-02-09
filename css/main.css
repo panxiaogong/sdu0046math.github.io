@@ -39,7 +39,7 @@ html{
 @font-face{
 	font-family: "KaTeX_Text";
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 450;
 	src: url("https://cdn.staticfile.org/KaTeX/0.16.9/fonts/KaTeX_Main-Italic.woff2") format("woff2"),
 		 url("https://cdn.staticfile.org/KaTeX/0.16.9/fonts/KaTeX_Main-Italic.woff") format("woff");
 	unicode-range: U+0041-005A, U+0061-007A;
